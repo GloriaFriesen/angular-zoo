@@ -26,19 +26,19 @@ Zoo employees including zookeepers  and administrators.
 ## Preparations
 
 #### Stuff it needs:
-- [ ] animal properites
-  - [ ] name
-  - [ ] species
-  - [ ] age
-  - [ ] diet
-  - [ ] location
-  - [ ] number of caretakers
-  - [ ] sex
-  - [ ] likes
-  - [ ] dislikes
+- [x] animal properites
+  - [x] name
+  - [x] species
+  - [x] age
+  - [x] diet
+  - [x] location
+  - [x] number of caretakers
+  - [x] sex
+  - [x] likes
+  - [x] dislikes
 - [ ] add animals
 - [ ] edit animals
-- [ ] view animals
+- [x] view animals
 - [ ] view based on age
   - all
   - young (< 2 years old)
@@ -68,7 +68,7 @@ Zoo employees including zookeepers  and administrators.
 ## Application Map
 * Components needed
   - [x] root component
-  - [ ] view-animal
+  - [x] animal-list
   - [ ] new-animal
   - [ ] edit-animal
 
