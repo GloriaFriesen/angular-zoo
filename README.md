@@ -67,9 +67,10 @@ Zoo employees including zookeepers  and administrators.
 
 ## Application Map
 * Components needed
-  * view-animal
-  * new-animal
-  * edit-animal
+  - [x] root component
+  - [ ] view-animal
+  - [ ] new-animal
+  - [ ] edit-animal
 
 ## Known Bugs
 We'll see.
