@@ -37,7 +37,7 @@ Zoo employees including zookeepers  and administrators.
   - [x] likes
   - [x] dislikes
 - [ ] add animals
-- [ ] edit animals
+- [x] edit animals
 - [x] view animals
 - [ ] view based on age
   - all
@@ -70,7 +70,7 @@ Zoo employees including zookeepers  and administrators.
   - [x] root component
   - [x] animal-list
   - [ ] new-animal
-  - [ ] edit-animal
+  - [x] edit-animal
 
 ## Known Bugs
 We'll see.
