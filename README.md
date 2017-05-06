@@ -39,7 +39,7 @@ Zoo employees including zookeepers  and administrators.
 - [x] add animals
 - [x] edit animals
 - [x] view animals
-- [ ] view based on age
+- [x] view based on age
   - all
   - young (< 2 years old)
   - mature (> 2 years old)

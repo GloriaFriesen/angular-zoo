@@ -7,15 +7,15 @@ import { Animal } from './animal.model';
   <h1>New Animal</h1>
   <div class="form-group">
     <label>Enter Species</label>
-    <input #newSpecies class="form-control">
+    <input #newSpecies required class="form-control">
   </div>
   <div class="form-group">
     <label>Enter Name</label>
-    <input #newName class="form-control">
+    <input #newName required class="form-control">
   </div>
   <div class="form-group">
     <label>Enter Age</label>
-    <input type="number" #newAge class="form-control">
+    <input type="number" min="0" #newAge required class="form-control">
   </div>
   <label>Diet</label>
   <select #newDiet  class="form-control">
@@ -25,11 +25,11 @@ import { Animal } from './animal.model';
   </select>
   <div class="form-group">
     <label>Location</label>
-    <input #newLocation class="form-control">
+    <input #newLocation class="form-control" />
   </div>
   <div class="form-group">
     <label>Number of Caretakers</label>
-    <input type="number" #newCaretakers class="form-control">
+    <input type="number" min="0" #newCaretakers required class="form-control">
   </div>
   <label>Sex</label>
   <select #newSex  class="form-control">
@@ -38,11 +38,11 @@ import { Animal } from './animal.model';
   </select>
   <div class="form-group">
     <label>Likes</label>
-    <input #newLikes class="form-control">
+    <input #newLikes required class="form-control">
   </div>
   <div class="form-group">
     <label>Dislikes</label>
-    <input #newDislikes class="form-control">
+    <input #newDislikes required class="form-control">
   </div>
   <a href="#animalList" class="linkToTop"><button (click)="submitForm(newSpecies.value, newName.value, newAge.value, newDiet.value, newLocation.value, newCaretakers.value, newSex.value, newLikes.value, newDislikes.value); newSpecies.value=''; newName.value=''; newAge.value=''; newDiet.value=''; newLocation.value=''; newCaretakers.value=''; newSex.value=''; newLikes.value=''; newDislikes.value='';">Save New Animal</button></a>
   `
