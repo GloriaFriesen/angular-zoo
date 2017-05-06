@@ -4,3 +4,8 @@ body {
    font-style: normal;
    font-size: 200%;
 }
+
+.linkToTop {
+  text-decoration: none;
+  color: inherit;
+}
