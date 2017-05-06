@@ -52,6 +52,8 @@ Zoo employees including zookeepers  and administrators.
     - [ ] descriptive links and buttons
     - [x] large font size
   - [ ] SASS
+  - [ ] dispaly animals in table
+  - [ ] toggle form to add new animal
 - [ ] view based on diet
   - herbivore
   - carnivore
@@ -68,6 +70,7 @@ Zoo employees including zookeepers  and administrators.
 - [ ] view based on species
 - [ ] calculate caretakers needed for each species
 - [ ] average age of species
+- [ ] sort animals based on properties
 
 ## Application Map
 * Components needed
