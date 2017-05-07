@@ -5,7 +5,9 @@ import { Animal } from './animal.model';
   selector: 'app-root',
   template: `
   <div class="container" id="animalList">
-    <h1>Angular Zoo</h1>
+    <div id="title">
+      <h1>Angular Zoo</h1>
+    </div>
 
     <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
 

@@ -27,4 +27,5 @@ export class FilterAgePipe implements PipeTransform {
     } else {
     return input;
     }
+  }
 }

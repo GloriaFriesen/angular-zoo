@@ -5,38 +5,50 @@ import { Animal } from './animal.model';
 @Component ({
   selector: 'edit-animal',
   template: `
-  <div *ngIf="childSelectedAnimal">
-    <h3>Edit {{childSelectedAnimal.name}}</h3>
-
-    <label>Species</label>
-    <input [(ngModel)]="childSelectedAnimal.species">
-
-    <label>Name</label>
-    <input [(ngModel)]="childSelectedAnimal.name">
-
-    <label>Age</label>
-    <input [(ngModel)]="childSelectedAnimal.age">
-
-    <label>Diet</label>
-    <input [(ngModel)]="childSelectedAnimal.diet">
-
-    <label>Location</label>
-    <input [(ngModel)]="childSelectedAnimal.location">
-
-    <label>Number of Caretakers</label>
-    <input [(ngModel)]="childSelectedAnimal.caretakers">
-
-    <label>Sex</label><br>
-    <input type="radio" [(ngModel)]="childSelectedAnimal.sex" [value]="1">Male<br>
-    <input type="radio" [(ngModel)]="childSelectedAnimal.sex" [value]="2">Female<br>
-
-    <label>Likes</label>
-    <input [(ngModel)]="childSelectedAnimal.likes">
-
-    <label>Dislikes</label>
-    <input [(ngModel)]="childSelectedAnimal.dislikes">
-
-    <button (click)="doneButtonClicked()">Done</button>
+  <div class="form" *ngIf="childSelectedAnimal">
+    <h2>Edit {{childSelectedAnimal.name}}</h2>
+    <div class="form-group">
+      <label>Species</label>
+      <input class="form-control" [(ngModel)]="childSelectedAnimal.species">
+    </div>
+    <div class="form-group">
+      <label>Name</label>
+      <input class="form-control" [(ngModel)]="childSelectedAnimal.name">
+    </div>
+    <div class="form-group">
+      <label>Age</label>
+      <input class="form-control" [(ngModel)]="childSelectedAnimal.age">
+    </div>
+    <div class="form-group">
+      <label>Diet</label>
+      <select [(ngModel)]="childSelectedAnimal.diet" class="form-control">
+        <option>Herbivore</option>
+        <option>Omnivore</option>
+        <option>Carnivore</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Location</label>
+      <input class="form-control" [(ngModel)]="childSelectedAnimal.location">
+    </div>
+    <div class="form-group">
+      <label>Number of Caretakers</label>
+      <input class="form-control" [(ngModel)]="childSelectedAnimal.caretakers">
+    </div>
+    <div class="form-group">
+      <label>Sex</label><br>
+      <input type="radio" [(ngModel)]="childSelectedAnimal.sex" [value]="1">Male<br>
+      <input type="radio" [(ngModel)]="childSelectedAnimal.sex" [value]="2">Female<br>
+    </div>
+    <div class="form-group">
+      <label>Likes</label>
+      <input class="form-control" [(ngModel)]="childSelectedAnimal.likes">
+    </div>
+    <div class="form-group">
+      <label>Dislikes</label>
+      <input class="form-control" [(ngModel)]="childSelectedAnimal.dislikes">
+    </div>
+    <button (click)="doneButtonClicked()">Save Changes</button>
   </div>
   `
 })

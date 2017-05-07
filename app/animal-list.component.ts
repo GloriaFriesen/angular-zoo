@@ -11,7 +11,7 @@ import { Animal } from './animal.model';
     <div class="col-md-4">
       <label>Filter by Age</label>
       <br>
-      <select (change)="onAgeChange($event.target.value)">
+      <select class="form-control" (change)="onAgeChange($event.target.value)">
         <option value="allAnimals" selected="selected">All Animals</option>
         <option value="youngAnimals">Young Animals (2 years and younger)</option>
         <option value="matureAnimals">Mature Animals (older than 2 years)</option>
@@ -20,7 +20,7 @@ import { Animal } from './animal.model';
     <div class="col-md-4">
       <label>Filter by Diet</label>
       <br>
-      <select (change)="onDietChange($event.target.value)">
+      <select class="form-control" (change)="onDietChange($event.target.value)">
         <option value="allAnimals" selected="selected">All Animals</option>
         <option value="herbivore">Herbivores</option>
         <option value="carnivore">Carnivores</option>
@@ -28,8 +28,9 @@ import { Animal } from './animal.model';
         <option value="anyMeat">Meat Eaters</option>
       </select>
     </div>
+  </div>
   <table>
-    <tr>
+    <tr id="tableHeader">
       <th>Name</th>
       <th>Species</th>
       <th>Age</th>
@@ -51,7 +52,7 @@ import { Animal } from './animal.model';
       <td>{{currentAnimal.sex}}</td>
       <td>{{currentAnimal.likes}}</td>
       <td>{{currentAnimal.dislikes}}</td>
-      <td><button (click)="editButtonHasBeenClicked(currentAnimal)">Edit</button></td>
+      <td><button (click)="editButtonHasBeenClicked(currentAnimal)" class="formButton">Edit</button></td>
     </tr>
   </table>
 

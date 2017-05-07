@@ -80,7 +80,7 @@ Zoo employees including zookeepers  and administrators.
   - [x] edit-animal
 
 ## Accessibility Features
-* Contrast ratio: 8.15
+* Contrast ratio (primary font color: background color): 10.69
   * Source: <http://colorsafe.co>
 * Dyslexic friendly font
   * Source: <https://fontlibrary.org/en/font/opendyslexic>
