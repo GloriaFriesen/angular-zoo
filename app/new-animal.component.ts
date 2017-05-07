@@ -46,16 +46,24 @@ import { Animal } from './animal.model';
       <input #newDislikes required class="form-control">
     </div>
     <a href="#animalList" class="linkToTop"><button class="saveButton" (click)="submitForm(newSpecies.value, newName.value, newAge.value, newDiet.value, newLocation.value, newCaretakers.value, newSex.value, newLikes.value, newDislikes.value); newSpecies.value=''; newName.value=''; newAge.value=''; newDiet.value=''; newLocation.value=''; newCaretakers.value=''; newSex.value=''; newLikes.value=''; newDislikes.value='';">Save New Animal</button></a>
+    <a href="#animalList" class="linkToTop">
+      <button (click)="cancelFormClicked()">Close Form</button>
+    </a>
   </div>
   `
 })
 
 export class NewAnimalComponent {
   @Output() newAnimalSender = new EventEmitter();
+  @Output() cancelFormClickedSender = new EventEmitter();
   @Input() addNewAnimal: boolean;
 
   submitForm(species: string, name: string, age: number, diet: string, location: string, caretakers: number, sex: string, likes: string, dislikes: string) {
     var newAnimalToAdd: Animal = new Animal(species, name, age, diet, location, caretakers, sex, likes, dislikes);
     this.newAnimalSender.emit(newAnimalToAdd);
+  }
+
+  cancelFormClicked() {
+    this.cancelFormClickedSender.emit();
   }
 }

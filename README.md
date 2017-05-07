@@ -46,14 +46,14 @@ Zoo employees including zookeepers  and administrators.
 
 #### Stuff it wants:
 - [ ] styling
-  - [ ] accessible design
+  - [x] accessible design
     - [x] Add dyslexic font
-    - [ ] high contrast colors
-    - [ ] descriptive links and buttons
+    - [x] high contrast colors
+    - [x] descriptive links and buttons
     - [x] large font size
   - [ ] SASS
   - [x] dispaly animals in table
-  - [ ] toggle form to add new animal
+  - [x] toggle form to add new animal
 - [x] view based on diet
   - herbivore
   - carnivore

@@ -13,7 +13,7 @@ import { Animal } from './animal.model';
 
     <edit-animal [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"></edit-animal>
 
-    <new-animal (newAnimalSender)="addAnimal($event)" [addNewAnimal]="addNewAnimal"></new-animal>
+    <new-animal (newAnimalSender)="addAnimal($event)" [addNewAnimal]="addNewAnimal" (cancelFormClickedSender)="closeNewForm()"></new-animal>
   </div>
   `
 })
@@ -38,6 +38,10 @@ export class AppComponent {
 
   showNewAnimal() {
     this.addNewAnimal = true;
+  }
+
+  closeNewForm() {
+    this.addNewAnimal = false;
   }
 
   addAnimal(newAnimalFromChild: Animal) {
