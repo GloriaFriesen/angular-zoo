@@ -79,6 +79,13 @@ Zoo employees including zookeepers  and administrators.
   - [x] new-animal
   - [x] edit-animal
 
+## Accessibility Features
+* Contrast ratio: 8.15
+  * Source: <http://colorsafe.co>
+* Dyslexic friendly font
+  * Source: <https://fontlibrary.org/en/font/opendyslexic>
+* All font size increased by 150%
+
 ## Known Bugs
 We'll see.
 
