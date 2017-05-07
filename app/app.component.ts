@@ -9,17 +9,18 @@ import { Animal } from './animal.model';
       <h1>Angular Zoo</h1>
     </div>
 
-    <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
+    <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)" (clickNewAnimalSender)="showNewAnimal()"></animal-list>
 
     <edit-animal [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"></edit-animal>
 
-    <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
+    <new-animal (newAnimalSender)="addAnimal($event)" [addNewAnimal]="addNewAnimal"></new-animal>
   </div>
   `
 })
 
 export class AppComponent {
   selectedAnimal = null;
+  addNewAnimal = false;
 
   masterAnimalList: Animal[] = [
     new Animal('Arctic Fox', 'Moon', 2, 'Carnivore', 'Northern Trail', 5, 'Female', 'Cool shade', 'Loud noises'),
@@ -33,6 +34,10 @@ export class AppComponent {
 
   finishedEditing() {
     this.selectedAnimal = null;
+  }
+
+  showNewAnimal() {
+    this.addNewAnimal = true;
   }
 
   addAnimal(newAnimalFromChild: Animal) {

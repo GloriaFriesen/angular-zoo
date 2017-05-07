@@ -52,7 +52,12 @@ td, th {
 
 .formButton {
   background-color: #708080;
-  padding: 2px;
+  padding: 3px;
+}
+
+.saveButton {
+  background-color: #1c2833;
+  padding: 10px;
 }
 
 .form {

@@ -55,6 +55,8 @@ import { Animal } from './animal.model';
       <td><button (click)="editButtonHasBeenClicked(currentAnimal)" class="formButton">Edit</button></td>
     </tr>
   </table>
+  <a href="#newAnimalForm">
+  <button (click)="newAnimalButtonClicked()" class="saveButton">Add an Animal</button></a>
 
   `
 })
@@ -62,10 +64,16 @@ import { Animal } from './animal.model';
 export class AnimalListComponent {
   @Input() childAnimalList: Animal[];
   @Output() clickSender = new EventEmitter();
+  @Output() clickNewAnimalSender = new EventEmitter();
 
   editButtonHasBeenClicked(animalToEdit: Animal) {
     this.clickSender.emit(animalToEdit);
   }
+
+  newAnimalButtonClicked() {
+    this.clickNewAnimalSender.emit();
+  }
+
   filterByAge: string = "allAnimals";
   filterByDiet: string = "allAnimals";
 

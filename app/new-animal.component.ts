@@ -1,10 +1,10 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Animal } from './animal.model';
 
 @Component ({
   selector: 'new-animal',
   template: `
-  <div class="form">
+  <div class="form" id="newAnimalForm" *ngIf="addNewAnimal">
     <h2>New Animal</h2>
     <div class="form-group">
       <label>Enter Species</label>
@@ -45,13 +45,14 @@ import { Animal } from './animal.model';
       <label>Dislikes</label>
       <input #newDislikes required class="form-control">
     </div>
-    <a href="#animalList" class="linkToTop"><button (click)="submitForm(newSpecies.value, newName.value, newAge.value, newDiet.value, newLocation.value, newCaretakers.value, newSex.value, newLikes.value, newDislikes.value); newSpecies.value=''; newName.value=''; newAge.value=''; newDiet.value=''; newLocation.value=''; newCaretakers.value=''; newSex.value=''; newLikes.value=''; newDislikes.value='';">Save New Animal</button></a>
+    <a href="#animalList" class="linkToTop"><button class="saveButton" (click)="submitForm(newSpecies.value, newName.value, newAge.value, newDiet.value, newLocation.value, newCaretakers.value, newSex.value, newLikes.value, newDislikes.value); newSpecies.value=''; newName.value=''; newAge.value=''; newDiet.value=''; newLocation.value=''; newCaretakers.value=''; newSex.value=''; newLikes.value=''; newDislikes.value='';">Save New Animal</button></a>
   </div>
   `
 })
 
 export class NewAnimalComponent {
   @Output() newAnimalSender = new EventEmitter();
+  @Input() addNewAnimal: boolean;
 
   submitForm(species: string, name: string, age: number, diet: string, location: string, caretakers: number, sex: string, likes: string, dislikes: string) {
     var newAnimalToAdd: Animal = new Animal(species, name, age, diet, location, caretakers, sex, likes, dislikes);
