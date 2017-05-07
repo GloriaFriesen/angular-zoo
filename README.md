@@ -52,9 +52,9 @@ Zoo employees including zookeepers  and administrators.
     - [ ] descriptive links and buttons
     - [x] large font size
   - [ ] SASS
-  - [ ] dispaly animals in table
+  - [x] dispaly animals in table
   - [ ] toggle form to add new animal
-- [ ] view based on diet
+- [x] view based on diet
   - herbivore
   - carnivore
   - omnivore

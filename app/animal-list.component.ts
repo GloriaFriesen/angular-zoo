@@ -7,13 +7,27 @@ import { Animal } from './animal.model';
 
   <h2>Current Animals:</h2>
   <br>
-  <label>Filter by Age</label>
-  <br>
-  <select (change)="onChange($event.target.value)">
-    <option value="allAnimals" selected="selected">All Animals</option>
-    <option value="youngAnimals">Young Animals (2 years and younger)</option>
-    <option value="matureAnimals">Mature Animals (older than 2 years)</option>
-  </select>
+  <div class="row">
+    <div class="col-md-4">
+      <label>Filter by Age</label>
+      <br>
+      <select (change)="onAgeChange($event.target.value)">
+        <option value="allAnimals" selected="selected">All Animals</option>
+        <option value="youngAnimals">Young Animals (2 years and younger)</option>
+        <option value="matureAnimals">Mature Animals (older than 2 years)</option>
+      </select>
+    </div>
+    <div class="col-md-4">
+      <label>Filter by Diet</label>
+      <br>
+      <select (change)="onDietChange($event.target.value)">
+        <option value="allAnimals" selected="selected">All Animals</option>
+        <option value="herbivore">Herbivores</option>
+        <option value="carnivore">Carnivores</option>
+        <option value="omnivore">Omnivores</option>
+        <option value="anyMeat">Meat Eaters</option>
+      </select>
+    </div>
   <table>
     <tr>
       <th>Name</th>
@@ -27,7 +41,7 @@ import { Animal } from './animal.model';
       <th>Dislikes</th>
       <th></th>
     </tr>
-    <tr *ngFor="let currentAnimal of childAnimalList | filterAge:filterByAge">
+    <tr *ngFor="let currentAnimal of childAnimalList | filterAge:filterByAge | filterDiet:filterByDiet">
       <td>{{currentAnimal.name}}</td>
       <td>{{currentAnimal.species}}</td>
       <td>{{currentAnimal.age}}</td>
@@ -52,8 +66,13 @@ export class AnimalListComponent {
     this.clickSender.emit(animalToEdit);
   }
   filterByAge: string = "allAnimals";
+  filterByDiet: string = "allAnimals";
 
-  onChange(optionFromMenu) {
+  onAgeChange(optionFromMenu) {
     this.filterByAge = optionFromMenu;
+  }
+
+  onDietChange(optionFromMenu) {
+    this.filterByDiet = optionFromMenu;
   }
 }
