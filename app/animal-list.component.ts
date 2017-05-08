@@ -28,6 +28,9 @@ import { Animal } from './animal.model';
         <option value="anyMeat">Meat Eaters</option>
       </select>
     </div>
+    <div id="caretakers" class="col-md-4">
+      
+    </div>
   </div>
   <table>
     <tr id="tableHeader">
@@ -56,7 +59,7 @@ import { Animal } from './animal.model';
     </tr>
   </table>
   <a href="#newAnimalForm">
-  <button (click)="newAnimalButtonClicked()" class="saveButton">Add an Animal</button></a>
+  <button id="newAnimalButton" (click)="newAnimalButtonClicked()" class="saveButton">Add an Animal</button></a>
 
   `
 })

@@ -45,9 +45,11 @@ import { Animal } from './animal.model';
       <label>Dislikes</label>
       <input #newDislikes required class="form-control">
     </div>
-    <a href="#animalList" class="linkToTop"><button class="saveButton" (click)="submitForm(newSpecies.value, newName.value, newAge.value, newDiet.value, newLocation.value, newCaretakers.value, newSex.value, newLikes.value, newDislikes.value); newSpecies.value=''; newName.value=''; newAge.value=''; newDiet.value=''; newLocation.value=''; newCaretakers.value=''; newSex.value=''; newLikes.value=''; newDislikes.value='';">Save New Animal</button></a>
     <a href="#animalList" class="linkToTop">
-      <button (click)="cancelFormClicked()">Close Form</button>
+      <button class="saveButton" (click)="submitForm(newSpecies.value, newName.value, newAge.value, newDiet.value, newLocation.value, newCaretakers.value, newSex.value, newLikes.value, newDislikes.value); newSpecies.value=''; newName.value=''; newAge.value=''; newDiet.value=''; newLocation.value=''; newCaretakers.value=''; newSex.value=''; newLikes.value=''; newDislikes.value='';">Save New Animal</button>
+    </a>
+    <a href="#animalList" class="linkToTop">
+      <button class="saveButton" (click)="cancelFormClicked()">Close Form</button>
     </a>
   </div>
   `

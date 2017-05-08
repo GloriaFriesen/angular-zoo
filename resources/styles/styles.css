@@ -71,3 +71,10 @@ td, th {
 .row {
   margin-bottom: 20px;
 }
+
+#newAnimalButton {
+  background-color: #708080;
+  color: #ffd700;
+  border-color: black;
+  border: 4px solid black; 
+}

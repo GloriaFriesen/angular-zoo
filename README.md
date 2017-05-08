@@ -1,16 +1,17 @@
-# Zoo
+# Angular Zoo
+
+#### _By Gloria Friesen_
+
 ### Zoo Animal Tracking Web Application
 Current Version: 1.0 - 04.28.2017
 
 ### Description
 
-Web based animal tracking application using Angular2 framework. Users will be able to add, edit, and view zoo animals.
+Web based animal tracking application using Angular2 framework. Users are able to add, edit, and view zoo animals.
 
 ### Intended Users
 
-Zoo employees including zookeepers  and administrators.
-
-### By Gloria Friesen
+Zoo employees including caretakers and administrators.
 
 ## Installation/Setup
 
@@ -45,7 +46,7 @@ Zoo employees including zookeepers  and administrators.
   - mature (> 2 years old)
 
 #### Stuff it wants:
-- [ ] styling
+- [x] styling
   - [x] accessible design
     - [x] Add dyslexic font
     - [x] high contrast colors
@@ -87,7 +88,7 @@ Zoo employees including zookeepers  and administrators.
 * All font size increased by 150%
 
 ## Known Bugs
-We'll see.
+None that I know of.
 
 ## Support and contact details
 Questions? Concerns? Suggestions? Reach out to me via github: <https://github.com/GloriaFriesen>.
