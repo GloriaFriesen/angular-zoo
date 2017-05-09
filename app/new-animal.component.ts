@@ -18,9 +18,12 @@ import { Animal } from './animal.model';
       <label>Enter Age</label>
       <input type="number" min="0" #newAge required class="form-control">
     </div>
-    <div class="form-group">
-      <label>Diet (Herbivore, Omnivore, or Carnivore)</label>
-      <input #newDiet required class="form-control">
+    <label>Diet</label>
+      <select #newDiet class="form-control">
+        <option value="Herbivore">Herbivore</option>
+        <option value="Omnivore">Omnivore</option>
+        <option value="Carnivore">Carnivore</option>
+      </select>
     <div class="form-group">
       <label>Location</label>
       <input #newLocation class="form-control">
@@ -29,10 +32,11 @@ import { Animal } from './animal.model';
       <label>Number of Caretakers</label>
       <input type="number" min="0" #newCaretakers required class="form-control">
     </div>
-    <div class="form-group">
-      <label>Sex</label>
-      <input #newSex required class="form-control">
-    </div>
+    <label>Sex</label>
+      <select #newSex class="form-control">
+        <option value="Female">Female</option>
+        <option value="Male">Male</option>
+      </select>
     <div class="form-group">
       <label>Likes</label>
       <input #newLikes required class="form-control">
